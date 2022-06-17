@@ -6,14 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Titre en attente...</title>
         <link rel="stylesheet" href="formulaire.css" media="screen">
+<script>
+  function init(){
+    var button = document.getElementById("button")
+  
+    button.onclick = () => {
+  window.open('http://localhost/site-repa/Construction/ingr%C3%A9dient.php', 'ingredient', 'width=600,height=300,left=100,top=100,width=600,height=300,left=100,top=100');
+}
+}
+
+</script>
 
 </head>
-<body>
+<body onload="init();">
 <div class="container">
-<div class="header"></div>   
+<div class="header"> 
 <?php 
     include "../menu-déroulant/entete.html";
 ?>
+</div>  
 <div class="main"></div>
 
 <form action="insert.php" method="post">
@@ -23,20 +34,9 @@
 <p>Ingredient: 
 
 <!-- ************************************** Choix nombre ingrédient(s) ****************************************** -->
-    
-<form action="" method="post">
-     <select name="Nbr" id="Nbr">
-           <option value="Nbr_1">1</option>
-           <option value="Nbr_2">2</option>
-           <option value="Nbr_3">3</option>
-           <option value="Nbr_4">4</option>
-           <option value="Nbr_5">5</option>
-    </select>
-<br> 
-<script>
-    document.getElementById(Nbr).value
-    
-</script>
+<!-- fenetre pop-up -->
+<button id="button">cliquez</button>
+
 
 <!-- ************************************** /Choix nombre ingrédient(s)/ ****************************************** -->
 <br>
